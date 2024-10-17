@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- Логотип -->
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="Logo" height="40">
+            </a>
+    
+            <!-- Кнопка для адаптивного меню (бургер-меню) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Проекты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="liveToastBtn">Материалы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Отзывы</a>
+                    </li>
+                </ul>
+                <!-- Номер телефона -->
+                <span class="navbar-text ms-3">
+                    +7 (999) 123-45-67
+                </span>
+            </div>
+    
+            <!-- Кнопка для запуска тоста -->
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <strong class="me-auto">AVEJI</strong>
+                        <small>now</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Привет, мы пока не сделали эту страницу. Скоро все будет готово!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container-fluid custom-block">
+        <div class="row w-100">
+            <div class="col-lg-6 d-flex flex-column justify-content-start">
+                <h1 class="custom-title">Эксклюзивная и нестандартная мебель для дома</h1>
+                <p class="custom-text">Мы можем произвести любую мебель для вашего проекта и найти производственное решение любой задумки.</p>
+            </div>
+            <div class="col-lg-6 d-flex justify-content-end align-items-start position-relative">
+                <a href="#" class="order-link text-uppercase" data-bs-toggle="modal" data-bs-target="#orderModal" data-bs-toggle="tooltip" title="Нажмите, чтобы заказать проект!">Заказать проект</a>
+            </div>
+        </div>
+
+        <!-- Левое изображение -->
+        <img src="img/left-image.png" alt="Left Image" class="left-image">
+
+        <!-- Правое изображение -->
+        <img src="img/right-image.png" alt="Right Image" class="right-image">
+    </div>
+    
+
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Заказать проект</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Имя</label>
+                            <input type="text" class="form-control" id="name" placeholder="Ваше имя">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ваш email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Телефон</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Ваш номер телефона">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Ваше сообщение"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid two-column-block"></div>
+        <div class="row">
+            <!-- Левая колонка -->
+            <div class="col-lg-6">
+                <p class="left-text">Более 5 лет создаем мебель для вашего комфорта</p>
+            </div>
+
+            <!-- Правая колонка -->
+            <div class="col-lg-6">
+                <p class="right-text">Мы — команда профессионалов, которые могут произвести любую мебель для вашего проекта, а также найти производственное решение любой задумки.</p>
+                <p class="right-text">Наша основная цель — реализовывать самые смелые задумки, и делать это качественно и аккуратно.</p>
+                <p class="right-text">В качестве материалов мы используем натуральные — стекло, дерево, бетон, камень, металл и эпоксидную смолу.</p>
+                <div class="pluses">
+                    <p class="pl-title">1 год</p>
+                    <p class="pl-txt">гарантии на всю продукцию</p>
+                    <p class="pl-title">300+</p>
+                    <p class="pl-txt">выполненных проектов</p>
+                    <p class="pl-title">15 дней</p>
+                    <p class="pl-txt">срок производства</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid two-column-block"></div>
+        <div class="row">
+        <!-- Левая колонка -->
+        <div class="col-lg-6">
+            <p class="left-text">Как мы работаем</p>
+        </div>
+
+        <!-- Правая колонка -->
+        <div class="col-lg-6">
+            <p class="right-text">Алгоритм работы с нами для удобства и понимания проекта</p>
+            <div class="row row_2">
+                <div class="work_one col-lg-6">
+                    <p class="left_txt_work">Идея</p>
+                </div>
+                <div class="work_two col-lg-6">
+                    <p class="right_txt_work">Клиент приходит к нам с идеей. Это может быть изображение/ эскиз или другой референс. А мы думаем над тем, как это реализовать, делаем технические чертежи и предлагаем решения по материалам.</p>
+                </div>
+
+
+                <div class="line"></div>
+
+
+                <div class="work_one col-lg-6">
+                    <p class="left_txt_work">Техническое задание</p>
+                </div>
+                <div class="work_two col-lg-6">
+                    <p class="right_txt_work">Вместе с клиентом формулируем корректное ТЗ, которое включает в себя визуализацию изделия, эскизный чертёж с габаритами, информацию по материалам и отделке, срок реализации проекта и другие обязательные пункты.</p>
+                </div>
+
+
+                <div class="line"></div>
+
+
+                <div class="work_one col-lg-6">
+                    <p class="left_txt_work">Коммерческое предложение</p>
+                </div>
+                <div class="work_two col-lg-6">
+                    <p class="right_txt_work">Предпочтительно используем натуральные материалы. Но любую смету можем оптимизировать, упростив материалы или конструктив. Сможем подстроиться под бюджет клиента и согласуем коммерческое предложение</p>
+                </div>
+
+
+                <div class="line"></div>
+                
+                <div class="work_one col-lg-6">
+                    <p class="left_txt_work">Подготовка рабочего проекта</p>
+                </div>
+                <div class="work_two col-lg-6">
+                    <p class="right_txt_work">Создадим рабочую документацию и чертежи. Это фундамент качественного производства. На этом этапе утверждаем с клиентом все габариты и материалы, чертежи и приступаем к производству.</p>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="work_one col-lg-6">
+                    <p class="left_txt_work">Производство и монтаж</p>
+                </div>
+                <div class="work_two col-lg-6">
+                    <p class="right_txt_work">Производство занимает от 15 рабочих дней, в зависимости от сложности и объёма. Монтажом тоже занимаемся самостоятельно. Ведь мы это сделаем быстро и аккуратно.</p>
+                </div>
+
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid three-column-block">
+        <p class="h3-text">Проекты</p>
+
+        <!-- Для мобильной версии используем карусель -->
+        <div id="projectsCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- Первая карточка -->
+                        <div class="col-12">
+                            <div class="project-image mx-auto">
+                                <a href="">
+                                    <img src="img/project-img_1.png" alt="">
+                                    <div class="overlay">Название товара 1</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Вторая карточка -->
+                        <div class="col-12">
+                            <div class="project-image mx-auto">
+                                <a href="">
+                                    <img src="img/project-img_2.png" alt="">
+                                    <div class="overlay">Название товара 2</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Третья карточка -->
+                        <div class="col-12">
+                            <div class="project-image mx-auto">
+                                <a href="">
+                                    <img src="img/project-img_3.png" alt="">
+                                    <div class="overlay">Название товара 3</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Четвертая карточка -->
+                        <div class="col-12">
+                            <div class="project-image mx-auto">
+                                <a href="">
+                                    <img src="img/project-img_4.png" alt="">
+                                    <div class="overlay">Название товара 4</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Пятая карточка -->
+                        <div class="col-12">
+                            <div class="project-image mx-auto">
+                                <a href="">
+                                    <img src="img/project-img_5.png" alt="">
+                                    <div class="overlay">Название товара 5</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Шестая карточка -->
+                        <div class="col-12">
+                            <div class="project-image mx-auto">
+                                <a href="">
+                                    <img src="img/project-img_6.png" alt="">
+                                    <div class="overlay">Название товара 6</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+        </div>
+
+        <!-- Для десктопной версии -->
+        <div class="d-none d-md-block">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="project-image">
+                        <a href="">
+                            <img src="img/project-img_1.png" alt="">
+                            <div class="overlay">Название товара 1</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="project-image">
+                        <a href="">
+                            <img src="img/project-img_2.png" alt="">
+                            <div class="overlay">Название товара 2</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="project-image">
+                        <a href="">
+                            <img src="img/project-img_3.png" alt="">
+                            <div class="overlay">Название товара 3</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-lg-4 col-md-4">
+                    <div class="project-image">
+                        <a href="">
+                            <img src="img/project-img_4.png" alt="">
+                            <div class="overlay">Название товара 4</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="project-image">
+                        <a href="">
+                            <img src="img/project-img_5.png" alt="">
+                            <div class="overlay">Название товара 5</div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <div class="project-image">
+                        <a href="">
+                            <img src="img/project-img_6.png" alt="">
+                            <div class="overlay">Название товара 6</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid three-column-block">
+        <p class="h3-text">Отзывы</p>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="review">
+                    <img src="img/icon.png" alt="">
+                    <p class="name">Игорь Антонов</p>
+                    <p class="review_txt">Обратилась к Aveji по рекомендации. Команда сразу поняла, какой дизайн я хочу. Предоставили несколько вариантов и в течение недели сделали наброски. Итог понравился, все на высшем уровне.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="review">
+                    <img src="img/icon.png" alt="">
+                    <p class="name">Ольга Иванова</p>
+                    <p class="review_txt">После пары заказов у компании Aveji убедилась, что за мебелью теперь только к ним. Абсолютно любые решения, в любых размерах и форм-факторе, то что нужно!</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="review">
+                    <img src="img/icon.png" alt="">
+                    <p class="name">Аркадий Макаров</p>
+                    <p class="review_txt">Aveji — настоящие профессионалы своего дела. Быстро поняли мою задумку, сделали дизайн, согласовали и изготовили мебель. А потом еще и бесплатно все собрали на месте. Большое спасибо!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <button type="button" class="btn btn-secondary"
+        data-bs-toggle="tooltip" data-bs-placement="top"
+        data-bs-custom-class="custom-tooltip"
+        data-bs-title="Эта кнопка вернет вас в начало">
+        Вернуться в начало
+    </button> -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toastTrigger = document.getElementById('liveToastBtn');
+            const toastLive = document.getElementById('liveToast');
+    
+            if (toastTrigger) {
+                toastTrigger.addEventListener('click', function () {
+                    const toast = new bootstrap.Toast(toastLive);
+                    toast.show();
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Инициализация всех элементов с data-bs-toggle="tooltip"
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
